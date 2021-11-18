@@ -1,0 +1,19 @@
+Final = IF('eco-counter'[Custom]="1","Morning",IF('eco-counter'[Custom]="2","Afternoon",IF('eco-counter'[Custom]="3","Evening","Night")))
+
+
+
+Footsteps = ('eco-counter'[Footfalls] * 13)
+
+
+
+
+Measure = VALUE(SUM('eco-counter'[Footfalls])*60)
+
+
+
+
+Power Generated = SUM('eco-counter'[Footfalls]) * 60
+
+
+
+Power generated in kW = [Measure] / 1000
